@@ -82,10 +82,8 @@ class CarServiceImplTest {
     void ValidateThatThereIsNoSimilarLicensePlateNumber() {
         // Arrange
         when(carRepository.findByLicensePlate("AKR-079")).thenReturn(car);
-
         // Act
         boolean result = carService.existThisLicensePlate("AKR-080");
-
         // Assert
         boolean expected = false;
         assertEquals(expected, result);
